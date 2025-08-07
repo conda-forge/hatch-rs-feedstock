@@ -1,6 +1,6 @@
 context:
   name: hatch-rs
-  version: "0.1.2"
+  version: "0.1.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/hatch_rs/hatch_rs-${{ version }}.tar.gz
-  sha256: 5652aa2cd709e48748c382abf77f1f170673736eb274f1357337be99d479c128
+  sha256: f977c7dcb68c157f566492e9b3e2338b473f6ddf86e4826c8a3aa5017a5cb3ff
 
 build:
   number: 0
