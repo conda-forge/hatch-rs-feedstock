@@ -1,6 +1,6 @@
 context:
   name: hatch-rs
-  version: "0.3.0"
+  version: "0.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/hatch_rs/hatch_rs-${{ version }}.tar.gz
-  sha256: 36e9cc92cb73e393411e8aa835984b4898446a113cf4c78fc5bd47ed2dec40fd
+  sha256: 2d5c5852bb2e971b2960b146a328cf039ee818231400371da6925c8115c2beef
 
 build:
   number: 0
@@ -31,7 +31,9 @@ tests:
         - hatch_rs.hooks
         - hatch_rs.plugin
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: Apache-2.0
